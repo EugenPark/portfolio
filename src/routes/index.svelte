@@ -1,17 +1,14 @@
 <script context="module" lang="ts">
+	import Navbar from '$lib/navbar/Navbar.svelte';
 	export const prerender = true;
 </script>
 
-<script lang="ts">
-	import WelcomeHeader from './home/welcomeHeader.svelte';
-</script>
+<Navbar />
 
 <svelte:head>
 	<title>Home</title>
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
-
-<section><WelcomeHeader /></section>
 
 <style>
 </style>
