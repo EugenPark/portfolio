@@ -2,9 +2,10 @@
 	export let theme = 'light';
 	let light = '☀️';
 	let dark = '🌙';
-	const html = document.querySelector('html');
 
 	function handleClick(event: any) {
+		const html = document.querySelector('html');
+
 		const target = event.target;
 		const state = target.checked;
 		theme = state ? 'dark' : 'light';
