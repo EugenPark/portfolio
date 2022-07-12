@@ -2,11 +2,17 @@
 	export let theme = 'light';
 	let light = '☀️';
 	let dark = '🌙';
+	const html = document.querySelector('html');
 
 	function handleClick(event: any) {
 		const target = event.target;
 		const state = target.checked;
 		theme = state ? 'dark' : 'light';
+		if (theme === 'dark') {
+			html?.classList.add('dark');
+		} else {
+			html?.classList.remove('dark');
+		}
 	}
 </script>
 
