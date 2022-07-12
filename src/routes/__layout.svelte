@@ -2,12 +2,19 @@
 	import Header from '$lib/header/Header.svelte';
 	import Navbar from '$lib/navbar/Navbar.svelte';
 	import '../app.css';
+
+	let theme = 'light';
 </script>
 
 <!-- <Header /> -->
 
-<Navbar />
-<main class="flex flex-col p-4 w-full min-h-screen bg-lightOrange">
+<Navbar bind:theme />
+
+<main
+	class="flex flex-col p-4 w-full min-h-screen {theme === 'light'
+		? 'bg-lightOrange'
+		: 'bg-darkSienna'}"
+>
 	<slot />
 </main>
 

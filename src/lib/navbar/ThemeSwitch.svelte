@@ -1,25 +1,30 @@
 <script lang="ts">
-	export let value = 'off';
+	export let theme = 'light';
 	let light = '☀️';
 	let dark = '🌙';
-	let checked = true;
 
 	function handleClick(event: any) {
 		const target = event.target;
-		const state = target.getAttribute('aria-checked');
-		checked = state === 'true' ? false : true;
-		value = checked === true ? 'on' : 'off';
+		const state = target.checked;
+		theme = state ? 'dark' : 'light';
 	}
 </script>
 
 <!-- Rounded switch -->
 <div class="flex gap-2 my-auto">
-	<span class="my-auto text-sm font-medium">{dark}</span>
+	<span class="my-auto text-sm font-medium">{light}</span>
 	<label for="checked-toggle" class="inline-flex relative items-center cursor-pointer">
-		<input type="checkbox" value="" id="checked-toggle" class="sr-only peer" checked />
+		<input
+			type="checkbox"
+			id="checked-toggle"
+			class="sr-only peer"
+			on:change={(e) => {
+				handleClick(e);
+			}}
+		/>
 		<div
-			class="w-11 h-6 bg-[#ccc] rounded-full peer peer-focus:ring-4 peer-focus:ring-skyBlueCrayola dark:peer-focus:ring-skyBlueCrayola dark:bg-[black] peer-checked:after:translate-x-full peer-checked:after:border-[white] after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-[white] after:border-[white] after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-[#ccc] peer-checked:bg-skyBlueCrayola"
+			class="w-11 h-6 bg-lightOrange rounded-full peer peer-focus:ring-4 peer-focus:ring-darkSienna dark:peer-focus:ring-darkSienna dark:bg-[black] peer-checked:after:translate-x-full peer-checked:after:border-[white] after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-[white] after:border-[white] after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-lightOrange peer-checked:bg-darkSienna"
 		/>
 	</label>
-	<span class="my-auto text-sm font-medium">{light}</span>
+	<span class="my-auto text-sm font-medium">{dark}</span>
 </div>

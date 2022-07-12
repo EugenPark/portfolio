@@ -1,5 +1,6 @@
 <script>
 	import ThemeSwitch from './ThemeSwitch.svelte';
+	export let theme = 'light';
 </script>
 
 <nav class="bg-green border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
@@ -11,7 +12,7 @@
 			>
 		</a>
 		<div class="flex md:order-2">
-			<ThemeSwitch />
+			<ThemeSwitch bind:theme />
 			<button
 				data-collapse-toggle="mobile-menu-4"
 				type="button"
