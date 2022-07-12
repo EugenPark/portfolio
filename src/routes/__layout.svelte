@@ -7,7 +7,7 @@
 <!-- <Header /> -->
 
 <Navbar />
-<main class="flex flex-col p-4 w-full min-h-screen bg-gray-500">
+<main class="flex flex-col p-4 w-full min-h-screen bg-lightOrange">
 	<slot />
 </main>
 

@@ -9,7 +9,7 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<div class=""><Bio /></div>
+<div class="flex"><Bio /></div>
 
 <style>
 </style>
