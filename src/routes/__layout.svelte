@@ -10,12 +10,8 @@
 
 <Navbar bind:theme />
 
-<main
-	class="flex flex-col p-4 w-full min-h-screen {theme === 'light'
-		? 'bg-lightOrange'
-		: 'bg-darkSienna'}"
->
-	<slot />
+<main class="flex p-4 min-h-screen {theme === 'light' ? 'bg-linen' : 'bg-darkSienna'}">
+	<div class="flex flex-col mx-auto max-w-2xl"><slot /></div>
 </main>
 
 <!-- <footer>

@@ -14,7 +14,11 @@ module.exports = {
 			wine: '#6A3937',
 			graniteGray: '#706563',
 			slateGray: '#748386',
-			opal: '#9DC7C8'
+			opal: '#9DC7C8',
+			lightCoral: '#F08080',
+			linen: '#F8EDE3',
+			jetStream: '#BDD2B6',
+			mint: '#44AC8C'
 		}
 	},
 	plugins: []

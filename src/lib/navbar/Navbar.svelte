@@ -3,7 +3,9 @@
 	export let theme = 'light';
 </script>
 
-<nav class="bg-green border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
+<nav
+	class="bg-linen dark:bg-darkSienna dark:text-[white] border-gray-200 px-2 sm:px-4 py-2.5 rounded "
+>
 	<div class="container flex flex-wrap justify-between items-center mx-auto">
 		<!-- <a href="https://flowbite.com/" class="flex items-center"> -->
 		<!-- <img src="/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" /> -->
